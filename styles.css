@@ -1,0 +1,1334 @@
+/* Educational theme with college colors */
+:root {
+    --primary-color: #003366; /* Deep blue - trust, professionalism */
+    --secondary-color: #FF6B35; /* Orange - energy, creativity */
+    --accent-color: #F1C40F; /* Yellow - optimism, innovation */
+    --light-color: #F5F5F5; /* Light gray - clean, modern */
+    --dark-color: #333333; /* Dark gray - text, contrast */
+    --success-color: #27ae60; /* Green - success */
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve loading performance */
+/* Ensure proper box sizing across all elements */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Improve text rendering */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f9f9f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* Improved background for desktop */
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    /* Ensure proper sizing */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Improve form element appearance across browsers */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    /* Ensure proper sizing */
+    box-sizing: border-box;
+    /* Improve appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Improve touch experience */
+    touch-action: manipulation;
+}
+
+/* Improve focus visibility for accessibility */
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-color: var(--primary-color);
+}
+
+/* Desktop form element improvements */
+@media (min-width: 768px) {
+    input, select, textarea {
+        padding: 14px;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 992px) {
+    input, select, textarea {
+        padding: 16px;
+        font-size: 18px;
+        border-width: 1px;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.2);
+    }
+}
+
+/* Improve select element styling */
+select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* Improve textarea sizing */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Improve button styling for touch devices */
+button {
+    background: linear-gradient(135deg, var(--primary-color), #0055a4);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 20px;
+    /* Better touch target sizing */
+    min-height: 48px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+
+/* Improve button states for better feedback */
+button:active {
+    transform: translateY(0);
+}
+
+button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0055a4, var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Desktop button improvements */
+@media (min-width: 992px) {
+    button {
+        padding: 18px 35px;
+        font-size: 20px;
+        min-height: 55px;
+        margin-top: 30px;
+    }
+    
+    button:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Improve button behavior on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    button {
+        transition: none;
+    }
+    
+    button:active {
+        transform: translateY(1px);
+    }
+    
+    button:hover:not(:disabled) {
+        background: linear-gradient(135deg, var(--primary-color), #0055a4);
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* Main content styling */
+main {
+    padding: 20px 0;
+}
+
+/* Improve container behavior */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Ensure proper sizing */
+    box-sizing: border-box;
+    /* Add subtle animation for better experience */
+    transition: all 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--primary-color), #0055a4);
+    color: white;
+    padding: 20px 0;
+    box-shadow: var(--box-shadow);
+    /* Ensure proper sizing */
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.header-text h1, .header-text h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.header-text h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Improve logo styling for better responsiveness */
+.logo {
+    max-height: 100px;
+    /* Ensure proper scaling */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    /* Add white background to improve visibility */
+    background-color: white;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Add transition for smooth scaling */
+    transition: all 0.3s ease;
+}
+
+/* Desktop header improvements */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 20px;
+    }
+    
+    .header-text {
+        flex: 1;
+    }
+    
+    .header-text h1, .header-text h2 {
+        text-align: left;
+    }
+    
+    .header-text h1 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .header-text h2 {
+        font-size: 1.3rem;
+    }
+    
+    .logo {
+        max-height: 120px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        padding: 30px 0;
+    }
+    
+    .header-content {
+        gap: 30px;
+    }
+    
+    .header-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .header-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .logo {
+        max-height: 140px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-content {
+        gap: 40px;
+    }
+    
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .logo {
+        max-height: 160px;
+    }
+}
+
+/* About Section Styles */
+.about-section {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 20px 0;
+    /* Add max-width for better desktop experience */
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.about-section h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.about-section p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Improve form layout for better spacing */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    /* Ensure form doesn't overflow on small screens */
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Improve spacing */
+    margin: 0 auto;
+    /* Add max-width for better desktop experience */
+    max-width: 600px;
+}
+
+/* Improve touch targets for mobile devices */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--primary-color);
+    /* Better touch target */
+    padding: 5px 0;
+}
+
+/* Ensure proper spacing for form elements */
+.form-group {
+    margin-bottom: 20px;
+    /* Ensure proper sizing */
+    box-sizing: border-box;
+    /* Add subtle transition for better experience */
+    transition: all 0.3s ease;
+}
+
+/* Improve footer for better mobile experience */
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    /* Ensure proper sizing */
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* Desktop enhancements */
+@media (min-width: 992px) {
+    /* Add subtle hover effects on desktop */
+    .form-group label {
+        transition: color 0.3s ease;
+    }
+    
+    .form-group label:hover {
+        color: var(--secondary-color);
+    }
+    
+    /* Improve form element hover states */
+    input:hover:not(:focus),
+    select:hover:not(:focus),
+    textarea:hover:not(:focus) {
+        border-color: #999;
+    }
+    
+    /* Add subtle animation to form elements */
+    .form-group {
+        transition: transform 0.2s ease;
+    }
+    
+    .form-group:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Improve button hover effect on desktop */
+    button:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+    
+    /* Add subtle shadow to form on desktop */
+    form {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Add subtle background pattern on desktop */
+    body {
+        background-image: radial-gradient(circle at 10% 20%, rgba(241, 196, 15, 0.05) 0%, transparent 20%),
+                          radial-gradient(circle at 90% 80%, rgba(255, 107, 53, 0.05) 0%, transparent 20%);
+    }
+}
+
+/* Desktop enhancements for form elements */
+@media (min-width: 768px) {
+    input, select, textarea {
+        padding: 14px;
+        font-size: 17px;
+    }
+    
+    .form-group label {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        padding: 16px 35px;
+        font-size: 19px;
+        min-height: 52px;
+    }
+    
+    form {
+        padding: 35px;
+        max-width: 650px;
+    }
+}
+
+@media (min-width: 992px) {
+    input, select, textarea {
+        padding: 16px;
+        font-size: 18px;
+    }
+    
+    .form-group label {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    button {
+        padding: 18px 40px;
+        font-size: 20px;
+        min-height: 56px;
+    }
+    
+    form {
+        padding: 40px;
+        max-width: 700px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Add subtle entrance animation for form elements */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .form-group {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+    }
+    
+    .form-group:nth-child(1) { animation-delay: 0.1s; }
+    .form-group:nth-child(2) { animation-delay: 0.2s; }
+    .form-group:nth-child(3) { animation-delay: 0.3s; }
+    .form-group:nth-child(4) { animation-delay: 0.4s; }
+    .form-group:nth-child(5) { animation-delay: 0.5s; }
+}
+
+/* Improve focus states on desktop */
+@media (min-width: 992px) and (hover: hover) {
+    input:focus, select:focus, textarea:focus {
+        box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.2);
+        border-color: var(--primary-color);
+    }
+    
+    /* Add subtle glow effect on focus */
+    input:focus, select:focus, textarea:focus, button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.2);
+    }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .container {
+        width: 90%;
+        max-width: 960px;
+    }
+    
+    form {
+        padding: 25px;
+    }
+    
+    header h1 {
+        font-size: 1.7rem;
+    }
+    
+    header h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Landscape tablets */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .form-row {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .form-row .form-group {
+        margin-bottom: 0;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .container {
+        width: 90%;
+    }
+    
+    form {
+        padding: 25px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    /* Keep member groups in grid on tablets */
+    .member-group .form-row {
+        grid-template-columns: 2fr 1.5fr;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .container {
+        width: 92%;
+    }
+    
+    form {
+        padding: 25px;
+    }
+}
+
+/* Large mobile devices */
+@media (min-width: 576px) and (max-width: 767px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .members-section {
+        padding: 15px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 575px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    /* Member groups stack vertically on mobile */
+    .member-group .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .member-group {
+        padding: 12px;
+    }
+    
+    .member-group h4 {
+        font-size: 0.95rem;
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    header h2 {
+        font-size: 1rem;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    form {
+        padding: 15px;
+    }
+    
+    .members-section {
+        padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .members-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    input, select, textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    main {
+        padding: 20px 0;
+    }
+    
+    footer {
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    /* Member groups stack vertically on mobile */
+    .member-group .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .member-group {
+        padding: 10px;
+    }
+    
+    .member-group h4 {
+        font-size: 0.9rem;
+    }
+    
+    header h1 {
+        font-size: 1.2rem;
+    }
+    
+    header h2 {
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        width: 98%;
+        padding: 0 8px;
+    }
+    
+    form {
+        padding: 12px;
+    }
+    
+    .members-section {
+        padding: 12px;
+        margin: 15px 0;
+    }
+    
+    .members-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    input, select, textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    
+    main {
+        padding: 15px 0;
+    }
+    
+    footer {
+        padding: 12px 0;
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* General desktop enhancements */
+@media (min-width: 992px) {
+    /* Add subtle shadow to main content */
+    main {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+    }
+    
+    /* Improve footer styling */
+    footer {
+        padding: 30px 0;
+        margin-top: 50px;
+    }
+    
+    /* Add subtle hover effect to footer */
+    footer:hover {
+        background: linear-gradient(135deg, #222, var(--dark-color));
+    }
+    
+    /* Improve overall body styling */
+    body {
+        background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    }
+    
+    /* Add subtle animation to container */
+    .container {
+        animation: fadeIn 0.8s ease forwards;
+        opacity: 0;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Ultra-wide monitor support */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    header .container {
+        max-width: 1400px;
+    }
+    
+    form {
+        max-width: 750px;
+    }
+    
+    .about-section {
+        max-width: 750px;
+    }
+    
+    .success-message {
+        max-width: 850px;
+    }
+}
+
+/* Improve form group behavior on small screens */
+@media (max-width: 480px) {
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    input, select, textarea {
+        padding: 10px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Ensure proper spacing for error messages on mobile */
+@media (max-width: 480px) {
+    .form-group div[style*="color: #e74c3c"] {
+        font-size: 12px !important;
+        margin-top: 3px !important;
+    }
+}
+
+/* Improve about section for mobile */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 20px 15px;
+    }
+    
+    .about-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .about-section p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+}
+
+/* Improve form layout on very small screens */
+@media (max-width: 360px) {
+    .container {
+        width: 98%;
+        padding: 0 5px;
+    }
+    
+    form {
+        padding: 10px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    input, select, textarea {
+        padding: 8px;
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.1rem;
+    }
+    
+    header h2 {
+        font-size: 0.9rem;
+    }
+    
+    .about-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .about-section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Improve input field behavior on mobile */
+@media (max-width: 480px) {
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 6px;
+    }
+    
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 0;
+    }
+}
+
+/* Ensure proper scrolling behavior on mobile */
+@media (max-width: 767px) {
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+    }
+    
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    main {
+        padding: 15px 0;
+    }
+}
+
+/* Improve button tap targets on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    button {
+        min-height: 48px;
+        padding: 14px 20px;
+    }
+    
+    .form-group label {
+        padding: 8px 0;
+        min-height: 24px;
+    }
+}
+
+/* Ensure proper focus states for touch devices */
+@media (hover: none) and (pointer: coarse) {
+    input:focus, select:focus, textarea:focus, button:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+    
+    button:hover:not(:disabled) {
+        background: linear-gradient(135deg, var(--primary-color), #0055a4);
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* Improve form accessibility on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px;
+    }
+    
+    select {
+        background-size: 12px;
+        padding-right: 30px;
+    }
+}
+
+/* Improve success message for mobile */
+.success-message {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-icon {
+    font-size: 60px;
+    color: var(--success-color);
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(39, 174, 96, 0.1);
+}
+
+.success-message h3 {
+    color: var(--success-color);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.success-message p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+.success-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.success-footer p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* WhatsApp link styling */
+.whatsapp-link {
+    color: #25D366;
+    font-weight: bold;
+    text-decoration: underline;
+    display: block;
+    margin-top: 10px;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    background-color: rgba(37, 211, 102, 0.15);
+    border: 2px solid #25D366;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.whatsapp-link:hover {
+    background-color: rgba(37, 211, 102, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+    color: #128C7E;
+}
+
+.whatsapp-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(37, 211, 102, 0.3);
+}
+
+/* Add a subtle pulsing animation to draw attention */
+.whatsapp-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(37, 211, 102, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Desktop enhancements for success message */
+@media (min-width: 768px) {
+    .success-message {
+        padding: 40px;
+        max-width: 650px;
+        margin: 30px auto;
+    }
+    
+    .success-message h3 {
+        font-size: 2rem;
+    }
+    
+    .success-message p {
+        font-size: 1.2rem;
+    }
+    
+    .success-icon {
+        font-size: 70px;
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (min-width: 992px) {
+    .success-message {
+        padding: 50px;
+        max-width: 700px;
+        margin: 40px auto;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .success-message h3 {
+        font-size: 2.2rem;
+    }
+    
+    .success-message p {
+        font-size: 1.3rem;
+    }
+    
+    .success-icon {
+        font-size: 80px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .success-footer p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .success-message {
+        max-width: 800px;
+        padding: 60px;
+    }
+    
+    .success-message h3 {
+        font-size: 2.5rem;
+    }
+    
+    .success-message p {
+        font-size: 1.4rem;
+    }
+    
+    .success-icon {
+        font-size: 100px;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Desktop-specific improvements */
+@media (min-width: 992px) {
+    /* Wider container for large screens */
+    .container {
+        max-width: 1400px;
+        width: 85%;
+    }
+    
+    /* Larger form for desktop */
+    form {
+        max-width: 700px;
+        padding: 40px;
+        margin: 30px auto;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Larger input fields */
+    input, select, textarea {
+        padding: 15px;
+        font-size: 18px;
+        border-width: 1px;
+    }
+    
+    /* Larger labels */
+    .form-group label {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    /* Larger button */
+    button {
+        padding: 18px 35px;
+        font-size: 20px;
+        min-height: 55px;
+        margin-top: 30px;
+    }
+    
+    /* Larger logo */
+    .logo {
+        max-height: 120px;
+        margin-bottom: 20px;
+    }
+    
+    /* Improved about section */
+    .about-section {
+        max-width: 700px;
+        padding: 40px;
+        margin: 30px auto;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .about-section h3 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .about-section p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+    
+    /* Improved form group spacing */
+    .form-group {
+        margin-bottom: 30px;
+    }
+    
+    /* Enhanced success message */
+    .success-message {
+        max-width: 750px;
+        padding: 50px;
+        margin: 30px auto;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .success-message h3 {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+    }
+    
+    .success-message p {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Improved footer */
+    footer {
+        padding: 40px 0;
+        margin-top: 60px;
+    }
+    
+    footer p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra large desktop improvements */
+@media (min-width: 1200px) {
+    .container {
+        width: 80%;
+        max-width: 1600px;
+    }
+    
+    form {
+        max-width: 800px;
+        padding: 50px;
+    }
+    
+    .about-section {
+        max-width: 800px;
+        padding: 50px;
+    }
+    
+    .success-message {
+        max-width: 850px;
+        padding: 60px;
+    }
+    
+    .about-section h3 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Desktop hover effects */
+@media (min-width: 992px) and (hover: hover) {
+    /* Hover effect on form elements */
+    input:hover:not(:focus),
+    select:hover:not(:focus),
+    textarea:hover:not(:focus) {
+        border-color: #999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Button hover effect */
+    button:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Form group hover effect */
+    .form-group:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* Ensure proper viewport handling */
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+    min-zoom: 1.0;
+    max-zoom: 1.0;
+    user-zoom: fixed;
+}
