@@ -198,23 +198,21 @@
                             <div class="about-section">
                                 <h3>College Project Registration</h3>
                                 <p style={{ textAlign: 'center', marginBottom: '20px', fontSize: '1.1rem' }}>
-                                    This project is organized by MES MLCOE College under the guidance of our Principal Sir and Club Coordinator, Ketan Sir.
+                                    The following projects are organized by MES MLCOE College under the guidance of Mr. Makrand Jadhav and Club Coordinator, Mr Ketan Karandikar
                                 </p>
-                                <p style={{ textAlign: 'center', marginBottom: '15px', fontSize: '1rem', color: '#666' }}>
-                                    We are working on the following Smart India Hackathon (SIH) problem statements:
+                                
+                                <p style={{ textAlign: 'center', marginBottom: '10px', fontSize: '1rem', color: '#666' }}>
+                                    <strong>1. AI-Based Internship Recommendation Engine for PM Internship Scheme</strong>
                                 </p>
                                 <p style={{ textAlign: 'center', marginBottom: '10px', fontSize: '1rem', color: '#666' }}>
-                                    <strong>1. AI-Based Internship Recommendation Engine for PM Internship Scheme</strong> (SIH No. 25034)
+                                    <strong>2. Sign Language Capture and Illustration System with Sensor Integration</strong>
                                 </p>
                                 <p style={{ textAlign: 'center', marginBottom: '10px', fontSize: '1rem', color: '#666' }}>
-                                    <strong>2. Sign Language Capture and Illustration System with Sensor Integration</strong> (SIH No. 25247)
-                                </p>
-                                <p style={{ textAlign: 'center', marginBottom: '10px', fontSize: '1rem', color: '#666' }}>
-                                    <strong>3. Student Innovation: Swadeshi for Atmanirbhar Bharat – Miscellaneous</strong> (SIH No. 25115)
+                                    <strong>3. Student Innovation: Swadeshi for Atmanirbhar Bharat – Miscellaneous</strong>
                                 </p>
                                 <p style={{ textAlign: 'center', marginBottom: '30px', fontSize: '1rem', color: '#666' }}>
-                                    We are currently forming a team of <strong>6 girls</strong> and <strong>5 boys</strong> to collaborate on these projects.
-                                    If you're passionate about innovation and technology, we invite you to register below and join us!
+                                    6 girls and 5 boys will be chosen to collaborate on these projects.
+                                    Interested students should register below.
                                 </p>
                             </div>
 
@@ -275,7 +273,7 @@
                                         name="contactNumber" 
                                         value={formData.contactNumber} 
                                         onChange={handleChange} 
-                                        placeholder="e.g., 9876543210"
+                                        placeholder=""
                                         maxLength="10"
                                         required 
                                     />
@@ -290,14 +288,14 @@
                                         name="email" 
                                         value={formData.email} 
                                         onChange={handleChange} 
-                                        placeholder="e.g., example@mlcoe.edu.in"
+                                        placeholder=""
                                         required 
                                     />
                                     {errors.email && <div style={{ color: '#e74c3c', fontSize: '14px', marginTop: '5px' }}>{errors.email}</div>}
                                 </div>
 
                                 <button type="submit" disabled={isSubmitting}>
-                                    {isSubmitting ? 'Registering...' : 'Register for Project'}
+                                    {isSubmitting ? 'Registering...' : 'Register'}
                                 </button>
                             </form>
                         </div>
